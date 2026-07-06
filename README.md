@@ -223,10 +223,10 @@ Road-Accident-Analysis-PowerBI/
 
 ## Author
 
-**Sayan Sau**
+**Tapobrata Sau**
 
-- GitHub: `https://github.com/sayansau496
-- LinkedIn: `https://www.linkedin.com/in/sayan-sau-8239216b
+- GitHub: `https://github.com/tapobrata-sau
+- LinkedIn: `https://www.linkedin.com/in/tapobrata-sau-b684402a8/
 
 > 
 
