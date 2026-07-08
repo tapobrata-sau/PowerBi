@@ -1,244 +1,327 @@
-** **Road Accident Analysis Dashboard | Power BI****
+# 🚗 Road Accident Analysis Dashboard | Power BI
 
+## 📌 Project Overview
 
+The **Road Accident Analysis Dashboard** is an interactive Power BI report developed to analyze road accident data and identify patterns in accident severity, vehicle involvement, road characteristics, speed limits, weather conditions, and geographical distribution.
 
-## Overview
-
-This project is an interactive **Power BI Road Accident Analysis Dashboard** built to analyze road accident and casualty data. It converts raw data into actionable insights on accident severity, road conditions, location, vehicle type, area type, and light conditions.
-
-The dashboard supports data-driven road-safety planning by helping users identify high-risk areas, trends, and contributing factors.
+The dashboard transforms raw accident records into meaningful visual insights, enabling users to explore accident trends and supporting better road safety decision-making.
 
 ---
 
-## Dashboard Preview
+# 📊 Dashboard Preview
 
-> Add a dashboard screenshot here after uploading your image to GitHub.
+<img width="1232" height="697" alt="Screenshot 2026-07-09 043424" src="https://github.com/user-attachments/assets/09d77029-8ecc-44b1-9578-2c3bc89f3311" />
+<img width="1227" height="695" alt="Screenshot 2026-07-09 043610" src="https://github.com/user-attachments/assets/a7f42b0a-cf81-4ba7-84f8-f8db56d5cb42" />
 
-<img width="719" height="399" alt="image" src="https://github.com/user-attachments/assets/b2479754-ba67-42af-9022-ee86330400a7" />
-
-```
 
 ---
 
-## Business Problem
+# 🎯 Project Objectives
 
-Road accident datasets contain large volumes of records that are difficult to interpret in spreadsheets. This project answers important questions such as:
+This dashboard answers several important business questions:
 
-- How many accidents and casualties occurred in 2022?
-- Did casualties increase or decrease compared with the previous year?
-- Which accident severity category has the highest number of casualties?
-- Which road type is most associated with casualties?
-- Are casualties higher in urban or rural areas?
-- Do more casualties occur during daylight or dark conditions?
-- Which months show higher accident activity?
-- Which locations should be prioritized for safety interventions?
-
----
-
-## Key Insights
-
-- **Total casualties in 2022:** approximately **195.7K**
-- **Year-over-year change:** approximately **11.9% decrease** in casualties
-- **Urban area casualties:** approximately **61.9%**
-- **Daylight casualties:** approximately **73.8%**
-- **Single carriageway casualties:** approximately **145K**
-- Casualty patterns can be compared month-wise between **2021 and 2022**
-- Severity analysis highlights **Fatal**, **Serious**, and **Slight** casualties
-
-> Values may vary depending on the source data, data cleaning rules, filters, and refresh date.
+- What is the total number of road casualties?
+- How many Fatal, Serious and Slight casualties occurred?
+- Which vehicle type is involved in the highest number of casualties?
+- Which road type experiences the highest casualties?
+- How do light conditions affect accidents?
+- What speed limits are associated with more accidents?
+- Where are accident hotspots located?
+- How do weather conditions and road surface conditions influence accidents?
 
 ---
 
-## Dashboard Features
+# 📈 Dashboard KPIs
 
-- KPI cards for Total Casualties, Total Accidents, and Accident Severity
-- Year-over-Year (YoY) comparison
-- Monthly casualty trend comparison for 2021 and 2022
-- Casualties by Road Type
-- Casualties by Vehicle Type
-- Casualties by Urban vs Rural Area
-- Casualties by Light Conditions
-- Geographic accident hotspot analysis using map visuals
-- Interactive slicers and filters
+The dashboard contains the following KPI cards:
 
----
-
-## Visuals Used
-
-| Visual | Purpose |
-|---|---|
-| KPI Cards | Show key metrics at a glance |
-| Line / Area Chart | Compare monthly casualties for 2021 and 2022 |
-| Horizontal Bar Chart | Compare casualties by road type |
-| Donut Charts | Show proportional distribution by area and light condition |
-| Map Visual | Identify accident hotspots by location |
-| Slicers | Filter the dashboard interactively |
+| KPI | Description |
+|------|-------------|
+| Total Casualties | Total number of casualties recorded |
+| Fatal Casualties | Total fatalities |
+| Serious Casualties | Total serious injuries |
+| Slight Casualties | Total slight injuries |
+| Top Vehicle | Vehicle type with the highest casualties |
 
 ---
 
-## Dataset Fields
+# 📊 Dashboard Visuals
 
-The dashboard uses fields similar to the following:
+The dashboard includes:
 
-- `Accident_Index`
-- `Accident Date`
-- `Number_of_Casualties`
-- `Accident Severity`
-- `Vehicle Type`
-- `Road Type`
-- `Urban_or_Rural_Area`
-- `Light Conditions`
-- `Latitude`
-- `Longitude`
-- `Location`
-- `Year`
-- `Month`
+### 🚗 Vehicle Type Analysis
+Shows total casualties by vehicle type.
+
+Insights:
+- Car contributes the highest number of casualties.
+- Vans and motorcycles follow behind.
 
 ---
 
-## Data Preparation
+### 🛣 Road Type Analysis
 
-The following steps were performed in Power Query / Power BI:
+Displays casualties by road type.
 
-1. Imported the road accident dataset.
-2. Checked and corrected data types.
-3. Removed duplicate and invalid records.
-4. Handled missing values where required.
-5. Created a Date table for time intelligence.
-6. Standardized categorical values such as severity, road type, and light conditions.
-7. Created DAX measures for KPIs and comparisons.
-8. Built visuals and added slicers for user interaction.
+Major road types include:
+
+- Single Carriageway
+- Dual Carriageway
+- Roundabout
+- One-way Street
+- Slip Road
 
 ---
 
-## DAX Measures
+### 💡 Light Condition Analysis
 
-### Total Casualties
+Analyzes accidents occurring under:
+
+- Daylight
+- Darkness (lights lit)
+- Darkness (lights unlit)
+- Darkness (no lighting)
+
+---
+
+### 🚦 Speed Limit Analysis
+
+Shows accident distribution across different speed limits.
+
+Used to identify roads with higher accident frequency.
+
+---
+
+### 🗺 Accident Location Map
+
+Interactive Azure/Bing Map displaying accident locations using latitude and longitude.
+
+Features:
+
+- Zoom
+- Pan
+- Interactive filtering
+- Geographic accident hotspots
+
+---
+
+### 🎛 Interactive Filters
+
+Users can filter the dashboard using:
+
+- Road Surface Conditions
+- Weather Conditions
+
+All visuals update dynamically based on selected filters.
+
+---
+
+# 📂 Dataset Information
+
+The dashboard uses road accident data containing fields such as:
+
+- Accident_Index
+- Accident Date
+- Number_of_Casualties
+- Accident Severity
+- Vehicle Type
+- Road Type
+- Speed Limit
+- Light Conditions
+- Weather Conditions
+- Road Surface Conditions
+- Latitude
+- Longitude
+- Local Authority
+- Year
+- Month
+
+---
+
+# 🧹 Data Preparation
+
+Data preparation was completed using Power Query.
+
+Steps included:
+
+- Importing Excel data
+- Removing duplicate records
+- Handling missing values
+- Correcting data types
+- Creating Date table
+- Standardizing category names
+- Creating DAX measures
+- Building interactive visuals
+
+---
+
+# 📐 DAX Measures Used
+
+## Total Casualties
 
 ```DAX
 Total Casualties =
 SUM(Data[Number_of_Casualties])
 ```
 
-### Total Accidents
+## Total Fatal Casualties
+
+```DAX
+Total Fatal Casualties =
+CALCULATE(
+    SUM(Data[Number_of_Casualties]),
+    Data[Accident_Severity]="Fatal"
+)
+```
+
+## Total Serious Casualties
+
+```DAX
+Total Serious Casualties =
+CALCULATE(
+    SUM(Data[Number_of_Casualties]),
+    Data[Accident_Severity]="Serious"
+)
+```
+
+## Total Slight Casualties
+
+```DAX
+Total Slight Casualties =
+CALCULATE(
+    SUM(Data[Number_of_Casualties]),
+    Data[Accident_Severity]="Slight"
+)
+```
+
+## Total Accidents
 
 ```DAX
 Total Accidents =
 DISTINCTCOUNT(Data[Accident_Index])
 ```
 
-### Current Year Casualties
+## Top Vehicle
 
 ```DAX
-CY Casualties =
-TOTALYTD(
-    [Total Casualties],
-    'Date'[Date]
+Top Vehicle =
+VAR TopVeh =
+TOPN(
+1,
+VALUES(Data[Vehicle_Type]),
+CALCULATE(SUM(Data[Number_of_Casualties])),
+DESC
 )
-```
 
-### Previous Year Casualties
-
-```DAX
-PY Casualties =
-CALCULATE(
-    [CY Casualties],
-    SAMEPERIODLASTYEAR('Date'[Date])
-)
-```
-
-### Year-over-Year Change %
-
-```DAX
-YoY Change % =
-DIVIDE(
-    [CY Casualties] - [PY Casualties],
-    [PY Casualties]
-)
-```
-
-### Serious Casualties
-
-```DAX
-Serious Casualties =
-CALCULATE(
-    [Total Casualties],
-    Data[Severity] = "Serious"
-)
+RETURN
+MAXX(TopVeh,Data[Vehicle_Type])
 ```
 
 ---
 
-## Project Structure
+# 📌 Key Insights
 
-```text
-Road-Accident-Analysis-PowerBI/
+✔ Cars contribute the largest share of road casualties.
+
+✔ Single carriageway roads experience the highest number of casualties.
+
+✔ Most accidents occur under daylight conditions.
+
+✔ Speed limits around 30 mph account for the highest accident frequency.
+
+✔ Accident hotspots are concentrated in specific districts visible on the map.
+
+✔ Dashboard filters allow dynamic comparison based on road surface and weather conditions.
+
+---
+
+# 📁 Project Structure
+
+```
+Road-Accident-Analysis/
 │
 ├── README.md
 ├── Road Accident Analysis Dashboard.pbix
 ├── data/
-│   └── road_accident_data.xlsx
+│      road_accident_data.xlsx
+│
 ├── images/
-│   └── dashboard-preview.png
+│      dashboard-preview.png
+│
 └── docs/
-    └── project-report.pdf
+       project-report.pdf
 ```
 
 ---
 
-## How to Run the Project
+# 🚀 How to Run
 
-1. Download or clone this repository.
-2. Install **Power BI Desktop**.
-3. Open the `.pbix` file.
-4. If prompted, update the data source path:
-   - Go to **Transform Data**
-   - Select **Data Source Settings**
-   - Update the source file location
-5. Click **Refresh**.
-6. Use the report slicers to explore the dashboard.
+1. Clone the repository
 
----
+```
+git clone https://github.com/yourusername/Road-Accident-Analysis.git
+```
 
-## Recommendations
+2. Open the `.pbix` file using Power BI Desktop.
 
-- Improve safety infrastructure on single carriageways.
-- Focus road-safety campaigns and traffic management efforts in urban areas.
-- Use monthly trend data for seasonal awareness campaigns and enforcement planning.
-- Improve signage, visibility, lighting, and pedestrian safety at high-risk locations.
-- Use map-based hotspots to prioritize local road-safety interventions.
-- Increase awareness for private vehicle and two-wheeler safety.
+3. If prompted,
 
----
+Transform Data
 
-## Tools and Technologies
+→ Data Source Settings
 
-- **Power BI Desktop**
-- **Power Query**
-- **DAX**
-- **Microsoft Excel / CSV**
-- **Data Visualization**
+→ Update Excel file path
+
+4. Refresh the dataset.
+
+5. Explore the dashboard using slicers.
 
 ---
 
-## Author
+# 💡 Business Recommendations
+
+Based on dashboard insights:
+
+- Improve road safety on Single Carriageway roads.
+- Increase monitoring around 30 mph zones.
+- Promote awareness for Car and Motorcycle safety.
+- Improve lighting in accident-prone areas.
+- Prioritize infrastructure improvements in hotspot locations.
+- Monitor road surface conditions during adverse weather.
+
+---
+
+# 🛠 Tools & Technologies
+
+- Microsoft Power BI
+- Power Query
+- DAX
+- Microsoft Excel
+- Azure/Bing Maps
+- Data Visualization
+
+---
+
+# 👨‍💻 Author
 
 **Tapobrata Sau**
 
-- GitHub: `https://github.com/tapobrata-sau
-- LinkedIn: `https://www.linkedin.com/in/tapobrata-sau-b684402a8/
+📧 Email: your-email@example.com
 
-> 
+🔗 LinkedIn:
+https://www.linkedin.com/in/tapobrata-sau-b684402a8/
 
----
-
-## License
-
-This project is intended for **educational and portfolio purposes**.  
-Please verify the original dataset license before redistributing the data.
+💻 GitHub:
+https://github.com/tapobrata-sau
 
 ---
 
-## If You Like This Project
+# ⭐ Support
 
-Give this repository a ⭐ on GitHub!
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+---
+
+# 📜 License
+
+This project is intended for learning, portfolio, and demonstration purposes.
+Please verify the dataset license before redistributing the data.
